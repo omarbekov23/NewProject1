@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<body>
+<div>
+    <button onclick="window.location.href='users/save_user'">add</button>
+</div>
+
+<div id="tb">
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="userl : ${userList}">
+            <td th:text="${userl.id}"/>
+            <td th:text="${userl.name}"/>
+            <td th:text="${userl.surname}"/>
+            <td th:text="${userl.email}"/>
+            <td th:text="${userl.country}"/>
+            <td>
+                <a th:href="@{/users/delete/{id}(id=${userl.id})}">
+                    <button>delete</button>
+                </a>
+            </td>
+            <td>
+                <a th:href="@{/update(id=${userl.id})}">
+                    <button>update</button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
