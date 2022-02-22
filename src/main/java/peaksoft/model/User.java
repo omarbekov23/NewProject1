@@ -79,7 +79,6 @@ public class User {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", email='" + email + '\'' +
-                ", country='" + country + '\'' +
-                '}';
+                ", country='" + country + '\'';
     }
 }

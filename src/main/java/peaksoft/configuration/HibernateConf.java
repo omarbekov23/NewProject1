@@ -13,10 +13,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 /**
- * created by Beksultan Mamatkadyr uulu
  * project : SpringMVC-CRUD
- * 1/11/21
- * Monday 21:48
  */
 @Configuration
 @EnableTransactionManagement
@@ -37,7 +34,9 @@ public class HibernateConf {
     public DataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5678/postgres");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("2303");
         return dataSource;
     }
 
@@ -53,7 +52,7 @@ public class HibernateConf {
     private Properties hibernateProperties() {
         Properties properties = new Properties();
         properties.setProperty(Environment.HBM2DDL_AUTO , "create");
-        properties.setProperty(Environment.DIALECT, "org.hibernate.dialect.PostgreSQL9Dialect");
+        properties.setProperty(Environment.DIALECT, "org.hibernate.dialect.PostgreSQL10Dialect");
         return properties;
     }
 }

@@ -5,10 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * created by Beksultan Mamatkadyr uulu
  * project : SpringMVC-CRUD
- * 1/11/21
- * Monday 22:19
  */
 @Controller
 @RequestMapping("/")

@@ -10,10 +10,7 @@ import peaksoft.service.UserService;
 import java.util.List;
 
 /**
- * created by Beksultan Mamatkadyr uulu
  * project : SpringMVC-CRUD
- * 1/11/21
- * Monday 22:18
  */
 @Controller
 @RequestMapping("/users")
@@ -60,7 +57,7 @@ public class UserController {
         //get from database
         userService.deleteById(id);
 
-        return "redirect:/user/main";
+        return "redirect:/users";
     }
 
     //update

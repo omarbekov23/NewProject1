@@ -16,10 +16,7 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
 /**
- * created by Beksultan Mamatkadyr uulu
  * project : SpringMVC-CRUD
- * 1/11/21
- * Monday 12:48
  */
 @Configuration
 @EnableWebMvc

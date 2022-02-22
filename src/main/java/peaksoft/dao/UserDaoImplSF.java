@@ -9,10 +9,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 /**
- * created by Beksultan Mamatkadyr uulu
  * project : SpringMVC-CRUD
- * 1/11/21
- * Monday 16:02
  */
 @Repository
 public class UserDaoImplSF implements UserDao{
